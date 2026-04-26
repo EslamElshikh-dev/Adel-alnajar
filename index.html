@@ -25,8 +25,8 @@
     {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
-      "@id": "https://yourwebsite.com",
-      "url": "https://yourwebsite.com",
+      "@id": "https://adeladeb-fanidecor.com",
+      "url": "https://adeladeb-fanidecor.com",
       "name": "عادل أديب فني ديكور",
       "image": "https://imgg.io/images/2026/03/29/020f6292ee1dbcbc63b72c7159463756.png",
       "telephone": "+966566492636",
@@ -251,43 +251,66 @@
             border: 1px solid var(--border-color); text-align: center; font-size: 1.1rem; line-height: 1.9;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: 0.4s ease;
         }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 35px; 
+        }
+        
+        /* تصميم كروت الخدمات المستطيلة (Vertical Cards) */
         .service-card {
             background-color: var(--surface-color); 
             border: 1px solid var(--border-color);
-            border-radius: 15px; padding: 30px 20px; text-align: center; transition: 0.4s ease; cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 20px; 
+            padding: 35px 25px 25px; 
+            text-align: center; 
+            transition: all 0.4s ease; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-        .service-card::before {
-            content: ''; position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px;
-            border: 1px solid transparent; border-radius: 10px; transition: 0.4s ease;
+        .service-card::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            border-radius: 20px; border: 2px solid transparent; transition: border-color 0.4s ease;
             pointer-events: none;
         }
         .service-card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 15px 35px rgba(197, 160, 89, 0.12); 
-            border-color: var(--gold-primary); 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 40px rgba(197, 160, 89, 0.15); 
             background-color: var(--card-hover-bg); 
         }
-        .service-card:hover::before { border-color: rgba(197, 160, 89, 0.3); }
+        .service-card:hover::after { border-color: rgba(197, 160, 89, 0.4); }
         
         .icon-3d-wrapper {
-            width: 70px; height: 70px; margin: 0 auto 20px; border-radius: 50%;
+            width: 85px; height: 85px; margin: 0 auto 25px; border-radius: 50%;
             background: linear-gradient(145deg, var(--surface-color), var(--bg-color));
-            box-shadow: 5px 5px 10px rgba(0,0,0,0.1), -5px -5px 10px rgba(255,255,255,0.02);
-            border: 1px solid var(--border-color);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1), -5px -5px 15px rgba(255,255,255,0.02);
+            border: 2px solid var(--border-color);
             display: flex; justify-content: center; align-items: center; transition: 0.3s;
         }
-        .icon-3d-wrapper i { font-size: 2rem; color: var(--gold-primary); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); transition: 0.3s; }
-        .service-card:hover .icon-3d-wrapper { border-color: var(--gold-primary); }
+        .icon-3d-wrapper i { font-size: 2.5rem; color: var(--gold-primary); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); transition: 0.3s; }
+        .service-card:hover .icon-3d-wrapper { border-color: var(--gold-primary); transform: scale(1.05); }
         
-        .service-card h3 { color: var(--gold-light); margin-bottom: 15px; font-size: 1.4rem; transition: color 0.4s ease; }
-        .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+        .service-card h3 { color: var(--gold-light); margin-bottom: 15px; font-size: 1.5rem; transition: color 0.4s ease; font-weight: 800; }
+        .service-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.8; flex-grow: 1; margin-bottom: 25px; }
+
+        /* زر طلب الخدمة بالواتساب داخل الكارت */
+        .service-btn {
+            display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+            background: transparent; color: #25d366; border: 2px solid #25d366;
+            padding: 10px 20px; border-radius: 30px; font-size: 1rem; font-weight: bold; text-decoration: none;
+            transition: all 0.3s ease; width: 100%;
+        }
+        .service-btn:hover {
+            background: #25d366; color: #ffffff;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); transform: translateY(-2px);
+        }
 
         .feature-card { text-align: center; padding: 20px; }
-        .feature-card .icon-3d-wrapper { width: 80px; height: 80px; margin-bottom: 15px; }
+        .feature-card .icon-3d-wrapper { width: 80px; height: 80px; margin-bottom: 15px; border-width: 1px; }
         .feature-card .icon-3d-wrapper i { font-size: 2.2rem; }
         .feature-card h3 { margin-bottom: 10px; color: var(--text-light); }
         .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
@@ -411,7 +434,7 @@
             .hero p { font-size: 0.95rem; }
             .about-text { padding: 25px 15px; font-size: 1rem; line-height: 1.7; }
             .grid-container { grid-template-columns: 1fr; gap: 20px; }
-            .service-card { padding: 25px 15px; }
+            .service-card { padding: 30px 20px 20px; }
             .map-container { height: 350px; margin-bottom: 30px; }
             .contact-form-container { padding: 25px 15px; }
             .bottom-nav { width: 98%; bottom: 10px; }
@@ -488,33 +511,47 @@
         <div class="grid-container">
             <div class="service-card reveal">
                 <div class="icon-3d-wrapper"><i class="fas fa-box-open"></i></div>
-                <h3><span class="ar">تفصيل خزائن</span><span class="en">Custom Cabinets</span></h3>
-                <p><span class="ar">تصميم وتنفيذ خزائن عملية وأنيقة تناسب كافة المساحات والاحتياجات بأجود أنواع الأخشاب والإكسسوارات المتينة.</span><span class="en">Design and execution of practical and elegant custom cabinets to suit all spaces and needs with the highest quality wood.</span></p>
+                <h3><span class="ar">تفصيل خزائن ودواليب</span><span class="en">Custom Cabinets & Wardrobes</span></h3>
+                <p><span class="ar">أفضل خدمات نجار تفصيل دواليب بالرياض. نقدم تصميمات عصرية ومبتكرة للخزائن الجدارية ودواليب الملابس التي تستغل المساحات بذكاء، مع تقسيمات داخلية مخصصة لتلبي احتياجاتك اليومية. نستخدم أجود أنواع الأخشاب والإكسسوارات لضمان المتانة العالية والشكل الأنيق الذي يعكس الفخامة.</span><span class="en">Top custom cabinet and wardrobe carpentry in Riyadh. We offer modern designs for wall cabinets that use space smartly, with custom internal divisions. We use the finest wood and accessories for high durability and an elegant look.</span></p>
+                <a href="#" onclick="orderService(event, 'تفصيل خزائن ودواليب', 'Custom Cabinets & Wardrobes')" class="service-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="ar">اطلب هذه الخدمة</span><span class="en">Request Service</span>
+                </a>
             </div>
-            <div class="service-card reveal">
-                <div class="icon-3d-wrapper"><i class="fas fa-door-closed"></i></div>
-                <h3><span class="ar">تصميم وتفصيل دواليب</span><span class="en">Custom Wardrobes</span></h3>
-                <p><span class="ar">دواليب ملابس عصرية ومبتكرة بتصميمات تستغل المساحات بذكاء، مع تقسيمات داخلية تلبي احتياجك اليومي.</span><span class="en">Modern and innovative wardrobes designed to use space smartly, with internal divisions that meet your daily needs.</span></p>
-            </div>
+            
             <div class="service-card reveal">
                 <div class="icon-3d-wrapper"><i class="fas fa-bed"></i></div>
-                <h3><span class="ar">تصميم وتفصيل غرف نوم</span><span class="en">Custom Bedrooms</span></h3>
-                <p><span class="ar">غرف نوم رئيسية تعكس الفخامة والراحة بتفاصيل خشبية متقنة ومصممة خصيصاً لتناسب ذوقك الرفيع.</span><span class="en">Master bedrooms that reflect luxury and comfort with exquisite wooden details, tailored to your refined taste.</span></p>
+                <h3><span class="ar">تفصيل غرف نوم</span><span class="en">Custom Bedrooms</span></h3>
+                <p><span class="ar">تفصيل غرف نوم رئيسية وغرف أطفال بتصاميم كلاسيكية ومودرن حسب الطلب. نعتبر من أفضل ورش النجارة بالرياض لتنفيذ غرف النوم التي تجمع بين الراحة والجمال بأدق التفاصيل الخشبية. نصمم لك مساحة خاصة تعكس ذوقك الرفيع بأسعار منافسة وجودة لا تضاهى تدوم لسنوات طويلة.</span><span class="en">Custom master and children's bedrooms with classic and modern designs. We are a top carpentry workshop in Riyadh for bedrooms combining comfort and beauty with precise wooden details. We design a space reflecting your refined taste.</span></p>
+                <a href="#" onclick="orderService(event, 'تفصيل غرف نوم', 'Custom Bedrooms')" class="service-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="ar">اطلب هذه الخدمة</span><span class="en">Request Service</span>
+                </a>
             </div>
+            
             <div class="service-card reveal">
                 <div class="icon-3d-wrapper"><i class="fas fa-layer-group"></i></div>
                 <h3><span class="ar">تفصيل ديكورات جدارية</span><span class="en">Wall Decors</span></h3>
-                <p><span class="ar">تكسيات خشبية وديكورات جدارية راقية تزيد من فخامة وجماليات المكان وتضفي دفئاً على مساحتك.</span><span class="en">Luxurious wooden cladding and wall decors that increase the elegance and add warmth to your space.</span></p>
+                <p><span class="ar">ارتقِ بجماليات منزلك مع أرقى التكسيات والديكورات الجدارية الخشبية في الرياض. متخصصون في تركيب بديل الخشب والتكسيات المودرن التي تضفي لمسة من الدفء والفخامة على المجالس والصالات. تنفيذ دقيق واحترافي يضمن لك تحويل الجدران العادية إلى تحف فنية متناسقة مع أثاثك.</span><span class="en">Elevate your home's aesthetics with the finest wooden wall cladding in Riyadh. Specializing in modern cladding that adds warmth and luxury to living rooms. Precise execution turns ordinary walls into artistic masterpieces matching your furniture.</span></p>
+                <a href="#" onclick="orderService(event, 'تفصيل ديكورات جدارية', 'Wall Decors')" class="service-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="ar">اطلب هذه الخدمة</span><span class="en">Request Service</span>
+                </a>
             </div>
+            
             <div class="service-card reveal">
                 <div class="icon-3d-wrapper"><i class="fas fa-tv"></i></div>
                 <h3><span class="ar">تفصيل ديكور شاشات</span><span class="en">TV Decors</span></h3>
-                <p><span class="ar">مكتبات تلفزيون وديكورات شاشات مودرن وكلاسيك مصممة خصيصاً لتناسب صالتك وتخفي الأسلاك بذكاء.</span><span class="en">Modern and classic TV cabinets and decors specially designed to fit your living room and cleverly hide wires.</span></p>
+                <p><span class="ar">تصميم وتنفيذ مكتبات تلفزيون وديكورات شاشات خشبية مبتكرة بالرياض. نقدم حلولاً ذكية لإخفاء الأسلاك مع إضاءات مخفية تبرز جمال التصميم. سواء كنت تفضل التصميم البسيط المودرن أو الكلاسيكي الفخم، نحن نصنع لك واجهة مبهرة تزيد من روعة صالة الجلوس لديك بأعلى المعايير.</span><span class="en">Design and execution of innovative wooden TV cabinets in Riyadh. We offer smart solutions to hide wires with hidden lighting to highlight the design. Whether you prefer a simple modern or luxurious classic design, we create a stunning facade.</span></p>
+                <a href="#" onclick="orderService(event, 'تفصيل ديكور شاشات', 'TV Decors')" class="service-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="ar">اطلب هذه الخدمة</span><span class="en">Request Service</span>
+                </a>
             </div>
+            
             <div class="service-card reveal">
                 <div class="icon-3d-wrapper"><i class="fas fa-tools"></i></div>
                 <h3><span class="ar">صيانة وتجديد النجارة</span><span class="en">Carpentry Maintenance</span></h3>
-                <p><span class="ar">خدمات صيانة وتجديد شاملة لكافة الأعمال الخشبية والموبيليا والأبواب لتعود كالجديدة تماماً مع معالجة الخدوش.</span><span class="en">Comprehensive maintenance and renewal services for all woodwork, furniture, and doors to return them as good as new.</span></p>
+                <p><span class="ar">خدمات نجار صيانة عامة للأبواب، الموبيليا، والأثاث الخشبي في الرياض. نقوم بمعالجة الخدوش، إصلاح المفصلات، وتجديد دهانات الأخشاب لتعود كأنها جديدة تماماً. خدمة سريعة وموثوقة نصلك أينما كنت لتقديم حلول صيانة متكاملة تطيل من عمر أثاثك وتحافظ على رونقه بأقل التكاليف.</span><span class="en">General carpentry maintenance for doors and wooden furniture in Riyadh. We treat scratches, fix hinges, and renew wood paint to make it look brand new. Fast and reliable service arriving wherever you are to extend your furniture's lifespan.</span></p>
+                <a href="#" onclick="orderService(event, 'صيانة وتجديد النجارة', 'Carpentry Maintenance')" class="service-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="ar">اطلب هذه الخدمة</span><span class="en">Request Service</span>
+                </a>
             </div>
         </div>
     </section>
@@ -564,7 +601,7 @@
 
         <div class="contact-form-container reveal">
             <h3><span class="ar">اطلب خدمتك الآن</span><span class="en">Request Your Service Now</span></h3>
-            <form onsubmit="sendToWhatsApp(event)" class="contact-form">
+            <form onsubmit="sendToWhatsAppForm(event)" class="contact-form">
                 <div class="form-row">
                     <input type="text" name="Name" placeholder="الاسم / Name" required>
                     <input type="email" name="Email" placeholder="البريد الإلكتروني / Email Address" required>
@@ -575,7 +612,7 @@
                         <option value="" disabled selected class="ar">-- اختر الخدمة المطلوبة --</option>
                         <option value="" disabled selected class="en">-- Select a Service --</option>
                         <option value="تفصيل خزائن ودواليب">تفصيل خزائن ودواليب</option>
-                        <option value="تصميم وتفصيل غرف نوم">تصميم وتفصيل غرف نوم</option>
+                        <option value="تفصيل غرف نوم">تفصيل غرف نوم</option>
                         <option value="تفصيل ديكورات جدارية">تفصيل ديكورات جدارية</option>
                         <option value="تفصيل ديكور شاشات">تفصيل ديكور شاشات</option>
                         <option value="صيانة وتجديد النجارة">صيانة وتجديد النجارة</option>
@@ -650,8 +687,20 @@
             sideMenu.classList.toggle('active');
         }
 
-        // إرسال نموذج الواتساب
-        function sendToWhatsApp(e) {
+        // إرسال الطلب المباشر من كروت الخدمات
+        function orderService(e, serviceAr, serviceEn) {
+            e.preventDefault();
+            const isAr = document.documentElement.lang === 'ar';
+            const serviceName = isAr ? serviceAr : serviceEn;
+            const greeting = isAr ? 'مرحباً عادل أديب، أريد الاستفسار عن خدمة:' : 'Hello Adel Adeeb, I would like to inquire about the service:';
+            
+            const text = `${greeting} ${serviceName}`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/966566492636?text=${encodedText}`, '_blank');
+        }
+
+        // إرسال نموذج الواتساب الكامل
+        function sendToWhatsAppForm(e) {
             e.preventDefault();
             const form = e.target;
             const name = form.Name.value;
@@ -660,7 +709,6 @@
             const service = form.Service.value;
             const details = form.Details.value;
 
-            // تحديد اللغة الحالية لتنسيق الرسالة
             const isAr = document.documentElement.lang === 'ar';
             
             let text = "";
@@ -733,7 +781,6 @@
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-            // التحقق من لغة النظام
             const savedLang = localStorage.getItem('siteLang');
             if (savedLang) {
                 setLanguage(savedLang);
@@ -742,7 +789,6 @@
                 setLanguage(browserLang.toLowerCase().startsWith('ar') ? 'ar' : 'en');
             }
 
-            // التحقق من الثيم (الافتراضي الآن هو الفاتح)
             const savedTheme = localStorage.getItem('siteTheme');
             if (savedTheme === 'dark') {
                 setTheme(true);
