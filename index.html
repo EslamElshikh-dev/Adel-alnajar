@@ -29,7 +29,7 @@
       "url": "https://adeladeb-fanidecor.com",
       "name": "عادل أديب فني ديكور",
       "image": "https://imgg.io/images/2026/03/29/020f6292ee1dbcbc63b72c7159463756.png",
-      "telephone": "+966566492636",
+      "telephone": "+966577802930",
       "email": "joinercity9@gmail.com",
       "description": "عادل أديب لأرقى أعمال النجارة والديكورات الخشبية بالرياض. متخصصون في تفصيل غرف النوم، الخزائن المبتكرة، والديكورات الجدارية بنطاق خدمة يغطي مدينة الرياض.",
       "areaServed": {
@@ -258,7 +258,7 @@
             gap: 35px; 
         }
         
-        /* تصميم كروت الخدمات المستطيلة (Vertical Cards) */
+        /* تصميم كروت الخدمات المستطيلة */
         .service-card {
             background-color: var(--surface-color); 
             border: 1px solid var(--border-color);
@@ -297,7 +297,6 @@
         .service-card h3 { color: var(--gold-light); margin-bottom: 15px; font-size: 1.5rem; transition: color 0.4s ease; font-weight: 800; }
         .service-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.8; flex-grow: 1; margin-bottom: 25px; }
 
-        /* زر طلب الخدمة بالواتساب داخل الكارت */
         .service-btn {
             display: inline-flex; justify-content: center; align-items: center; gap: 8px;
             background: transparent; color: #25d366; border: 2px solid #25d366;
@@ -314,6 +313,51 @@
         .feature-card .icon-3d-wrapper i { font-size: 2.2rem; }
         .feature-card h3 { margin-bottom: 10px; color: var(--text-light); }
         .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* ================= مواعيد العمل ================= */
+        .working-hours {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            transition: 0.4s ease;
+        }
+        .working-hours h3 {
+            color: var(--gold-primary);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .working-hours ul {
+            list-style: none;
+            padding: 0;
+        }
+        .working-hours li {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 10px;
+            border-bottom: 1px dashed var(--border-color);
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        .working-hours li:last-child {
+            border-bottom: none;
+        }
+        .working-hours .day {
+            font-weight: bold;
+        }
+        .working-hours .time {
+            color: var(--text-muted);
+            direction: ltr; /* لضمان ظهور الأرقام بشكل صحيح */
+        }
+        .working-hours .time.closed {
+            color: #e74c3c;
+            font-weight: bold;
+            direction: inherit;
+        }
 
         /* ================= تواصل معنا والخريطة ونموذج الاتصال ================= */
         .contact-info { text-align: center; margin-bottom: 40px; padding: 0 10px; }
@@ -343,7 +387,7 @@
             white-space: nowrap;
         }
 
-        /* تنسيق نموذج الاتصال (الواتساب) */
+        /* تنسيق نموذج الاتصال */
         .contact-form-container {
             max-width: 800px; margin: 0 auto;
             background: var(--surface-color); padding: 40px; border-radius: 15px;
@@ -435,6 +479,7 @@
             .about-text { padding: 25px 15px; font-size: 1rem; line-height: 1.7; }
             .grid-container { grid-template-columns: 1fr; gap: 20px; }
             .service-card { padding: 30px 20px 20px; }
+            .working-hours { padding: 20px 15px; }
             .map-container { height: 350px; margin-bottom: 30px; }
             .contact-form-container { padding: 25px 15px; }
             .bottom-nav { width: 98%; bottom: 10px; }
@@ -584,10 +629,25 @@
 
     <section id="contact" class="section-alt">
         <h2 class="section-title reveal"><span class="ar">تواصل معي</span><span class="en">Contact Me</span></h2>
+        
         <div class="contact-info reveal">
-            <p><i class="fas fa-phone"></i> <span class="ar">رقم التواصل: </span><span class="en">Phone: </span><a href="tel:0566492636" style="color:inherit; text-decoration:none; direction:ltr; display:inline-block;">0566492636</a></p>
-            <p><i class="fab fa-whatsapp"></i> <span class="ar">واتساب: </span><span class="en">WhatsApp: </span><a href="https://wa.me/966566492636" style="color:inherit; text-decoration:none; direction:ltr; display:inline-block;">0566492636</a></p>
+            <p><i class="fas fa-phone"></i> <span class="ar">رقم التواصل: </span><span class="en">Phone: </span><a href="tel:0577802930" style="color:inherit; text-decoration:none; direction:ltr; display:inline-block;">0577802930</a></p>
+            <p><i class="fab fa-whatsapp"></i> <span class="ar">واتساب: </span><span class="en">WhatsApp: </span><a href="https://wa.me/966577802930" style="color:inherit; text-decoration:none; direction:ltr; display:inline-block;">0577802930</a></p>
             <p><i class="fas fa-envelope"></i> <span class="ar">البريد الإلكتروني: </span><span class="en">Email: </span><a href="mailto:joinercity9@gmail.com" style="color:inherit; text-decoration:none;">joinercity9@gmail.com</a></p>
+        </div>
+
+        <div class="working-hours reveal">
+            <h3><i class="fas fa-clock"></i> <span class="ar">ساعات العمل</span><span class="en">Working Hours</span></h3>
+            <ul>
+                <li>
+                    <span class="day"><span class="ar">السبت - الخميس</span><span class="en">Sat - Thu</span></span> 
+                    <span class="time">08:00 AM - 10:00 PM</span>
+                </li>
+                <li>
+                    <span class="day"><span class="ar">الجمعة</span><span class="en">Friday</span></span> 
+                    <span class="time closed"><span class="ar">مغلق</span><span class="en">Closed</span></span>
+                </li>
+            </ul>
         </div>
         
         <div class="map-container reveal">
@@ -630,10 +690,10 @@
     </section>
 
     <div class="floating-action-menu">
-        <a href="tel:0566492636" class="float-btn call-btn" aria-label="Call">
+        <a href="tel:0577802930" class="float-btn call-btn" aria-label="Call">
             <i class="fas fa-phone-alt"></i>
         </a>
-        <a href="https://wa.me/966566492636" class="float-btn wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <a href="https://wa.me/966577802930" class="float-btn wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
@@ -696,7 +756,7 @@
             
             const text = `${greeting} ${serviceName}`;
             const encodedText = encodeURIComponent(text);
-            window.open(`https://wa.me/966566492636?text=${encodedText}`, '_blank');
+            window.open(`https://wa.me/966577802930?text=${encodedText}`, '_blank');
         }
 
         // إرسال نموذج الواتساب الكامل
@@ -719,7 +779,7 @@
             }
 
             const encodedText = encodeURIComponent(text);
-            window.open(`https://wa.me/966566492636?text=${encodedText}`, '_blank');
+            window.open(`https://wa.me/966577802930?text=${encodedText}`, '_blank');
         }
 
         // نظام اللغتين التلقائي واليدوي
